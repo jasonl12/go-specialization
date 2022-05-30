@@ -28,3 +28,7 @@ func TestFindian(t *testing.T) {
 			find(tt.input))
 	}
 }
+
+// The program should print "Found!" for the following example entered strings,
+// "ian", "Ian", "iuiygaygn", "I d skd a efju N". The program should print
+// "Not Found!" for the following strings, "ihhhhhn", "ina", "xian".
