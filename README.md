@@ -1,2 +1,2 @@
 # go-specialization
-Google Go Specialization (Coursera)
+Programming with Google Go Specialization (Coursera)
