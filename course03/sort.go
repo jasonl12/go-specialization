@@ -26,6 +26,7 @@ import (
 const parts = 4
 
 func worker(input []int, ch chan<- []int) {
+	fmt.Printf("It is sorting the subarray %v\n", input)
 	if len(input) == 1 {
 		ch <- input
 	} else {
@@ -110,11 +111,6 @@ func main() {
 			}
 
 			a, b, c, d := <-ch, <-ch, <-ch, <-ch
-			fmt.Println("goroutine return:", a)
-			fmt.Println("goroutine return:", b)
-			fmt.Println("goroutine return:", c)
-			fmt.Println("goroutine return:", d)
-
 			r := merge(merge(a, b), merge(c, d))
 			fmt.Printf("\nsort: %v\n", r)
 		}
